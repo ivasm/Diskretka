@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\N modules">
+      <UniqueIdentifier>{59220929-55f0-4d2d-94c1-3bc4d94c6e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Z modules">
+      <UniqueIdentifier>{0ed518d0-0d12-4db5-88be-cb4cfc1a843c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Q modules">
+      <UniqueIdentifier>{a2f33607-2019-4ee0-a2bc-94baa1424371}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Diskretka.cpp">
@@ -26,80 +35,104 @@
     <ClInclude Include="golova.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="COM_NN_D.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="NZER_N_B.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ADD_1N_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ADD_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="SUB_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MUL_ND_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MUL_Nk_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="SUB_NDN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MOD_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MUL_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="DIV_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="ALL.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="GCF_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="NZER_N_B.h">
+      <Filter>Файлы заголовков\N modules</Filter>
     </ClInclude>
-    <ClInclude Include="LCM_NN_N.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="COM_NN_D.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_Nk_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_ND_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ADD_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ADD_1N_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SUB_NDN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SUB_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
     </ClInclude>
     <ClInclude Include="DIV_NN_Dk.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DIV_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MOD_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="LCM_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
+    </ClInclude>
+    <ClInclude Include="GCF_NN_N.h">
+      <Filter>Файлы заголовков\N modules</Filter>
     </ClInclude>
     <ClInclude Include="ABS_Z_N.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="POZ_Z_D.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MUL_ZM_Z.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="TRANS_N_Z.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="TRANS_Z_N.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Z modules</Filter>
     </ClInclude>
     <ClInclude Include="ADD_ZZ_Z.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="SUB_ZZ_Z.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="MUL_ZZ_Z.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Z modules</Filter>
     </ClInclude>
     <ClInclude Include="DIV_ZZ_Z.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Z modules</Filter>
     </ClInclude>
     <ClInclude Include="MOD_ZZ_Z.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_ZM_Z.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_ZZ_Z.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="POZ_Z_D.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SUB_ZZ_Z.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANS_N_Z.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANS_Z_N.h">
+      <Filter>Файлы заголовков\Z modules</Filter>
+    </ClInclude>
+    <ClInclude Include="RED_Q_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="INT_Q_B.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANS_Z_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="TRANS_Q_Z.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ADD_QQ_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SUB_QQ_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_QQ_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DIV_QQ_Q.h">
+      <Filter>Файлы заголовков\Q modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
