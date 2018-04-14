@@ -25,13 +25,13 @@
 #include "DIV_ZZ_Z.h" // Z-9
 #include "MOD_ZZ_Z.h" // Z-10
 #include "RED_Q_Q.h" // Q-1
-#include "INT_Q_B.h" // Q-2 -
-#include "TRANS_Z_Q.h" // Q-3 -
-#include "TRANS_Q_Z.h" // Q-4 -
+#include "INT_Q_B.h" // Q-2
+#include "TRANS_Z_Q.h" // Q-3
+#include "TRANS_Q_Z.h" // Q-4
 #include "ADD_QQ_Q.h" // Q-5
 #include "SUB_QQ_Q.h" // Q-6
 #include "MUL_QQ_Q.h" // Q-7
-#include "DIV_QQ_Q.h" // Q-8 -
+#include "DIV_QQ_Q.h" // Q-8
 #include "ADD_PP_P.h" // P-1 -
 #include "SUB_PP_P.h" // P-2 -
 #include "MUL_PQ_P.h" // P-3 -
