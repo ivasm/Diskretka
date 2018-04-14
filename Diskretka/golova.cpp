@@ -1,28 +1,4 @@
 #include "golova.h"
-#include <malloc.h>
-#include <iostream>
-
-using namespace std;
-
-struct N {
-	int *n = nullptr;
-	int len;
-};
-
-struct Z {
-	N *number;
-	bool sign;
-};
-
-struct Q {
-	Z *num;
-	N *denom;
-};
-
-struct P {
-	Q **k;
-	int len;
-};
 
 N* inputN() {
 	char *symbol = (char*)malloc(1);
@@ -121,7 +97,7 @@ P* inputP() {
 	printf("Enter a power of polynom: ");
 	len = getNumber();
 	qs = (Q**)realloc(qs, sizeof(Q*) * (len + 1));
-	for (int i = len - 1; i >= 0; i--) {
+	for (int i = len; i >= 0; i--) {
 		printf("***\nEnter coefficient %d\n", len - i);
 		qs[i] = inputQ();
 	}
@@ -132,11 +108,13 @@ P* inputP() {
 }
 
 void printP(P* p) {
-	for (int i = p->len - 1; i >= 0; i--) {
+	for (int i = p->len; i >= 0; i--) {
 		if (i != 0) {
-			printf("( ");
-			printQ(p->k[i]);
-			printf(" ) * x^%d + ", i);
+			if (!(p->k[i]->num->number->n[0] == 0 && p->k[i]->num->number->len == 1)) {
+				printf("( ");
+				printQ(p->k[i]);
+				printf(" ) * x^%d + ", i);
+			}
 		}
 		else
 			printQ(p->k[i]);
