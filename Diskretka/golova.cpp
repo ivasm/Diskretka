@@ -1,13 +1,13 @@
 #include "golova.h"
 
 N* inputN() {
+	printf("Enter N: ");
 	char *symbol = (char*)malloc(1);
 	int *k = nullptr, len = 0;
 	N *number = nullptr;
 	do {
 		*symbol = getchar();
 		if ('0' <= *symbol && *symbol <= '9') {
-			printf("%c", *symbol);
 			k = (int*)realloc(k, (len + 1) * sizeof(int));
 			k[len] = atoi(symbol);
 			len++;
@@ -16,7 +16,6 @@ N* inputN() {
 	number = (N*)malloc(sizeof(N));
 	number->n = (int*)malloc(len * sizeof(int));
 	number->len = len;
-
 	for (int i = 0; i < len; i++)
 		number->n[i] = k[len - i - 1];
 	free(k);
@@ -108,16 +107,25 @@ P* inputP() {
 }
 
 void printP(P* p) {
-	for (int i = p->len; i >= 0; i--) {
+	int last = -1;
+	for (int i = 0; i <= p->len; i++) {
+		if (p->k[i]->num->number->n[0] == 0 && p->k[i]->num->number->len == 1)
+			last = i;
+		else
+			break;
+	}
+	for (int i = p->len; i >= 0 && i != last; i--) {
 		if (i != 0) {
 			if (!(p->k[i]->num->number->n[0] == 0 && p->k[i]->num->number->len == 1)) {
 				printf("( ");
 				printQ(p->k[i]);
-				printf(" ) * x^%d + ", i);
+				printf(" ) * x^%d ", i);
+				if (i - 1 != last) printf("+ ");
 			}
 		}
 		else
-			printQ(p->k[i]);
+			if (!(p->k[i]->num->number->n[0] == 0 && p->k[i]->num->number->len == 1))
+				printQ(p->k[i]);
 	}
 }
 

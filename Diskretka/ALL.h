@@ -1,19 +1,19 @@
 #pragma once
 #include "golova.h"
-#include "COM_NN_D.h" // N-1
-#include "NZER_N_B.h" // N-2
-#include "ADD_1N_N.h" // N-3
-#include "ADD_NN_N.h" // N-4
-#include "SUB_NN_N.h" // N-5
-#include "MUL_ND_N.h" // N-6
-#include "MUL_Nk_N.h" // N-7
-#include "MUL_NN_N.h" // N-8
-#include "SUB_NDN_N.h" // N-9
-#include "DIV_NN_Dk.h" // N-10
-#include "DIV_NN_N.h" // N-11
-#include "MOD_NN_N.h" // N-12
-#include "GCF_NN_N.h" // N-13
-#include "LCM_NN_N.h" // N-14
+#include "COM_NN_D.h" // N-1 +
+#include "NZER_N_B.h" // N-2 +
+#include "ADD_1N_N.h" // N-3 +- иногда вылетает прога (Вызвано исключение: нарушение доступа для чтения. a->n было nullptr.)
+#include "ADD_NN_N.h" // N-4 -- (1+9)
+#include "SUB_NN_N.h" // N-5 +- (10-11) должно быть сравнение (COM_NN_D)
+#include "MUL_ND_N.h" // N-6 --
+#include "MUL_Nk_N.h" // N-7 + (0*10^k = 00..00)
+#include "MUL_NN_N.h" // N-8 --
+#include "SUB_NDN_N.h" // N-9 -- (10-1)
+#include "DIV_NN_Dk.h" // N-10 --
+#include "DIV_NN_N.h" // N-11 -- прога вылетает на модуле ADD_1N_N
+#include "MOD_NN_N.h" // N-12 -- прога вылетает на модуле ADD_1N_N (т.к. ссылается DIV_NN_N)
+#include "GCF_NN_N.h" // N-13 -- прога вылетает на модуле ADD_1N_N (т.к. ссылается MOD_NN_N)
+#include "LCM_NN_N.h" // N-14 -- прога вылетает на модуле ADD_1N_N (т.к. ссылается DIV_NN_N)
 #include "ABS_Z_N.h" // Z-1
 #include "POZ_Z_D.h" // Z-2
 #include "MUL_ZM_Z.h" // Z-3
