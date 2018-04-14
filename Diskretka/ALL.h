@@ -3,12 +3,12 @@
 #include "COM_NN_D.h" // N-1 +
 #include "NZER_N_B.h" // N-2 +
 #include "ADD_1N_N.h" // N-3 +
-#include "ADD_NN_N.h" // N-4 +- (1+99..99)
-#include "SUB_NN_N.h" // N-5 +- (10-11) должно быть сравнение (COM_NN_D)
-#include "MUL_ND_N.h" // N-6 --
-#include "MUL_Nk_N.h" // N-7 + (0*10^k = 00..00)
-#include "MUL_NN_N.h" // N-8 --
-#include "SUB_NDN_N.h" // N-9 -- (10-1)
+#include "ADD_NN_N.h" // N-4 +
+#include "SUB_NN_N.h" // N-5 +
+#include "MUL_ND_N.h" // N-6 +
+#include "MUL_Nk_N.h" // N-7 +
+#include "MUL_NN_N.h" // N-8 +
+#include "SUB_NDN_N.h" // N-9 +
 #include "DIV_NN_Dk.h" // N-10 --
 #include "DIV_NN_N.h" // N-11 +- если результат > 9, то прога зацикливается
 #include "MOD_NN_N.h" // N-12 --
