@@ -4,33 +4,43 @@
 N ADD_NN_N(N a, N b)
 {
 	N result;
-	if (COM_NN_D(a, b) == 2)
+	if (COM_NN_D(a, b) == 2) //Если a>b
 	{
-		result = a;
-		for (int i = 0; i < result.len; i++)
+		result = a; //Будем прибавлять к а
+		int size = b.len; //Если у b меньше разрядов чем у а, то нет нужды изменять разряды, начиная с b.len+2
+		for (int i = 0; i < size; i++)
 		{
-			result.n[i] += b.n[i];
-			if (result.n[i]>9)
+			result.n[i] += b.n[i];	//Складываем соответствующие разряды
+			if (result.n[i]>9)		//Если результат больше 9, то берём остаток от деления на 10 и добавляем единицу в следующий разряд
 			{
 				result.n[i] %= 10;
-				if (i == result.len - 1)
+				if (i == result.len - 1)	//Если следующего разряда нет, то он создаётся
+				{
 					result.n = (int*)realloc(result.n, (++result.len) * sizeof(int));
-				result.n[i + 1] = 1;
+					result.n[i + 1] = 1;	//Следующему "пустому" разряду присваивается единица
+				}
+				else
+					result.n[i + 1]++; //В случае если следующий разряд существует, он увеличивается на единицу
 			}
 		}
 	}
-	else
+	else //Если a<b
 	{
-		result = b;
-		for (int i = 0; i < result.len; i++)
+		result = b;	//Будем прибавлять к b
+		int size = a.len; //Если у а меньше разрядов чем у b, то нет нужды изменять разряды, начиная с a.len+2
+		for (int i = 0; i < size; i++)
 		{
-			result.n[i] += a.n[i];
-			if (result.n[i]>9)
+			result.n[i] += a.n[i];	//Складываем соответствующие разряды
+			if (result.n[i]>9)		//Если результат больше 9, то берём остаток от деления на 10 и добавляем единицу в следующий разряд
 			{
 				result.n[i] %= 10;
-				if (i == result.len - 1)
+				if (i == result.len - 1)	//Если следующего разряда нет, то он создаётся
+				{
 					result.n = (int*)realloc(result.n, (++result.len) * sizeof(int));
-				result.n[i + 1] = 1;
+					result.n[i + 1] = 1;	//Следующему "пустому" разряду присваивается единица
+				}
+				else
+					result.n[i + 1]++; //В случае если следующий разряд существует, он увеличивается на единицу
 			}
 		}
 	}

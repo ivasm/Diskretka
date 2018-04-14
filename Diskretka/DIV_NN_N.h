@@ -5,7 +5,10 @@ N DIV_NN_N(N X1, N X2)
 {
 	N xCopy;         //Объявляем временную переменную, которая будет
 					 //хранить копию делимого
-	N t = N();    //Объявляем переменную счётчик, обнуляем.
+	N t;    //Объявляем переменную счётчик, обнуляем.
+	t.n = (int*)malloc(sizeof(int));
+	t.n[0] = 0;
+	t.len = 1;
 	if (!NZER_N_B(X2))   //Если делитель равен нулю, выдает ошибку
 		printf("Делитель равен нулю.");
 	else
@@ -15,7 +18,7 @@ N DIV_NN_N(N X1, N X2)
 			do
 			{
 				xCopy = SUB_NN_N(xCopy, X2);  //Вычитаем из большего числа меньшее
-				t = *ADD_1N_N(&t);  //Наращиваем t
+				ADD_1N_N(&t);  //Наращиваем t
 			} while (COM_NN_D(xCopy, X2) == 2 || COM_NN_D(xCopy, X2) == 0);  //Цикл пока делимое больше или равно делителя
 		}
 
@@ -26,11 +29,11 @@ N DIV_NN_N(N X1, N X2)
 				do
 				{
 					xCopy = SUB_NN_N(xCopy, X1);
-					t = *ADD_1N_N(&t);
+					ADD_1N_N(&t);
 				} while (COM_NN_D(xCopy, X1) == 2);
 			}
 			else
 				if (COM_NN_D(X1, X2) == 0)  //Если числа равны
-					t = *ADD_1N_N(&t);
+					ADD_1N_N(&t);
 	return t;
 }

@@ -9,6 +9,6 @@ Z DIV_ZZ_Z(struct Z First, struct N Second)
 	Result.sign = First.sign;
 	Result.number = &DIV_NN_N(Module, Second);
 	if (Result.sign == 1)
-		Result.number = ADD_1N_N(Result.number);
+		ADD_1N_N(Result.number);
 	return Result;
 }
