@@ -5,7 +5,7 @@ N SUB_NN_N(N a, N b)
 {
 	N c;
 	int l = 0;
-	for (size_t i = 0; i < a.len; i++)
+	for (int i = 0; i < a.len; i++)
 	{
 		c.n = (int*)realloc(c.n, (l + 1) * sizeof(int));
 		if (i < b.len)

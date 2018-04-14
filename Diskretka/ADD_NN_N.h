@@ -7,7 +7,7 @@ N ADD_NN_N(N a, N b)
 	if (COM_NN_D(a, b) == 2)
 	{
 		result = a;
-		for (size_t i = 0; i < result.len; i++)
+		for (int i = 0; i < result.len; i++)
 		{
 			result.n[i] += b.n[i];
 			if (result.n[i]>9)
@@ -22,7 +22,7 @@ N ADD_NN_N(N a, N b)
 	else
 	{
 		result = b;
-		for (size_t i = 0; i < result.len; i++)
+		for (int i = 0; i < result.len; i++)
 		{
 			result.n[i] += a.n[i];
 			if (result.n[i]>9)

@@ -22,6 +22,9 @@
     <Filter Include="Файлы заголовков\Q modules">
       <UniqueIdentifier>{a2f33607-2019-4ee0-a2bc-94baa1424371}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\P modules">
+      <UniqueIdentifier>{a3172c22-0113-446a-beda-f3a903175ccd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Diskretka.cpp">
@@ -133,6 +136,45 @@
     </ClInclude>
     <ClInclude Include="DIV_QQ_Q.h">
       <Filter>Файлы заголовков\Q modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ADD_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SUB_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="LED_P_Q.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MOD_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_PQ_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MUL_Pxk_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="NMR_P_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="GCF_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="FAC_P_Q.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DIV_PP_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DER_P_P.h">
+      <Filter>Файлы заголовков\P modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DEG_P_N.h">
+      <Filter>Файлы заголовков\P modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
