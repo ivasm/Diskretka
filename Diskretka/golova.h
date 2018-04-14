@@ -22,18 +22,22 @@ struct P {
 	int len;
 };
 
+N* initN();
 N* inputN();
 void printN(N*);
 N* freeN(N*);
 
+Z* initZ();
 Z* inputZ();
 void printZ(Z*);
 Z* freeZ(Z*);
 
+Q* initQ();
 Q* inputQ();
 void printQ(Q*);
 Q* freeQ(Q*);
 
+P* initP(int);
 P* inputP();
 void printP(P*);
 P* freeP(P*);

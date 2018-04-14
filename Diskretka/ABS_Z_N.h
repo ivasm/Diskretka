@@ -1,8 +1,12 @@
 #pragma once
 // Z-1
 
-N ABS_Z_N(Z a)
+N* ABS_Z_N(Z *a)
 {
-	N* resPtr = a.number;
-	return *resPtr;
+	N* x = (N*)malloc(sizeof(N));
+	x->n = (int*)malloc(sizeof(int) * a->number->len);
+	for (int i = 0; i < a->number->len; i++)
+		x->n[i] = a->number->n[i];
+	x->len = a->number->len;
+	return x;
 }

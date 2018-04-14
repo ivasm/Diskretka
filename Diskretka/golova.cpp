@@ -1,5 +1,10 @@
 #include "golova.h"
 
+N* initN() {
+	N* n = (N*)malloc(sizeof(N));
+	return n;
+}
+
 N* inputN() {
 	printf("Enter N: ");
 	char *symbol = (char*)malloc(1);
@@ -34,6 +39,12 @@ N* freeN(N* n) {
 	return nullptr;
 }
 
+Z* initZ() {
+	Z* z = (Z*)malloc(sizeof(Z));
+	z->number = initN();
+	return z;
+}
+
 Z* inputZ() {
 	Z* z = nullptr;
 	z = (Z*)malloc(sizeof(Z));
@@ -63,6 +74,13 @@ Z* freeZ(Z* z) {
 	freeN(z->number);
 	free(z);
 	return nullptr;
+}
+
+Q* initQ() {
+	Q* q = (Q*)malloc(sizeof(Q));
+	q->num = initZ();
+	q->denom = initN();
+	return q;
 }
 
 Q* inputQ() {
