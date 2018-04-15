@@ -2,12 +2,15 @@
 
 N* initN() {
 	N* n = (N*)malloc(sizeof(N));
+	n->n = (int*)malloc(sizeof(int));
+	n->len = 1;
+	n->n[0] = 0;
 	return n;
 }
 
 N* inputN() {
 	printf("Enter N: ");
-	char *symbol = (char*)malloc(1);
+	char *symbol = (char*)malloc(sizeof(char));
 	int *k = nullptr, len = 0;
 	N *number = nullptr;
 	do {
@@ -25,6 +28,7 @@ N* inputN() {
 		number->n[i] = k[len - i - 1];
 	free(k);
 	free(symbol);
+	number = deNULL(number);
 	return number;
 }
 
@@ -37,6 +41,26 @@ N* freeN(N* n) {
 	free(n->n);
 	free(n);
 	return nullptr;
+}
+
+N* deNULL(N* n) {
+	int i = 1,
+		l = n->len;
+	for (int j = 0; j < l; j++)
+		i = n->n[j] == 0 ? i : j + 1;
+	n->n = (int*)realloc(n->n, i * sizeof(int));
+	n->len = i;
+	return n;
+}
+
+N* assignmentN(N* n) {
+	N* a = (N*)malloc(sizeof(N));
+	int l = n->len;
+	a->n = (int*)malloc(l * sizeof(int));
+	for (int i = 0; i < l; i++)
+		a->n[i] = n->n[i];
+	a->len = l;
+	return a;
 }
 
 Z* initZ() {

@@ -1,16 +1,16 @@
 #pragma once
 #include "golova.h"
-#include "COM_NN_D.h" // N-1 +
-#include "NZER_N_B.h" // N-2 +
-#include "ADD_1N_N.h" // N-3 +
-#include "ADD_NN_N.h" // N-4 +
-#include "SUB_NN_N.h" // N-5 +
-#include "MUL_ND_N.h" // N-6 +
-#include "MUL_Nk_N.h" // N-7 +
-#include "MUL_NN_N.h" // N-8 +
-#include "SUB_NDN_N.h" // N-9 +
-#include "DIV_NN_Dk.h" // N-10 + (возможен трабл с делением 0 на 0)
-#include "DIV_NN_N.h" // N-11 +
+#include "COM_NN_D.h" // N-1 ++
+#include "NZER_N_B.h" // N-2 ++
+#include "ADD_1N_N.h" // N-3 ++
+#include "ADD_NN_N.h" // N-4 ++
+#include "SUB_NN_N.h" // N-5 ++
+#include "MUL_ND_N.h" // N-6 ++
+#include "MUL_Nk_N.h" // N-7 ++
+#include "MUL_NN_N.h" // N-8 ++
+#include "SUB_NDN_N.h" // N-9 ++
+#include "DIV_NN_Dk.h" // N-10 ++
+#include "DIV_NN_N.h" // N-11 +-
 #include "MOD_NN_N.h" // N-12 +- 11/3
 #include "GCF_NN_N.h" // N-13 --
 #include "LCM_NN_N.h" // N-14 --
