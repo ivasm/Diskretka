@@ -1,39 +1,9 @@
 #pragma once
 // N-11
 
-N DIV_NN_N(N X1, N X2)
+N* DIV_NN_N(N* a, N* b)
 {
-	N xCopy;         //Объявляем временную переменную, которая будет
-					 //хранить копию делимого
-	N t;    //Объявляем переменную счётчик, обнуляем.
-	t.n = (int*)malloc(sizeof(int));
-	t.n[0] = 0;
-	t.len = 1;
-	if (!NZER_N_B(X2))   //Если делитель равен нулю, выдает ошибку
-		printf("Делитель равен нулю.");
-	else
-		if (COM_NN_D(X1, X2) == 2) //Если Первое число больше второго:
-		{
-			xCopy = X1; //Во временную переменную записываем значение большего числа
-			do
-			{
-				xCopy = SUB_NN_N(xCopy, X2);  //Вычитаем из большего числа меньшее
-				ADD_1N_N(&t);  //Наращиваем t
-			} while (COM_NN_D(xCopy, X2) == 2 || COM_NN_D(xCopy, X2) == 0);  //Цикл пока делимое больше или равно делителя
-		}
-
-		else
-			if (COM_NN_D(X1, X2) == 1)  //Если второе число больше первого: (Делаем те же операции)
-			{
-				xCopy = X2;
-				do
-				{
-					xCopy = SUB_NN_N(xCopy, X1);
-					ADD_1N_N(&t);
-				} while (COM_NN_D(xCopy, X1) == 2);
-			}
-			else
-				if (COM_NN_D(X1, X2) == 0)  //Если числа равны
-					ADD_1N_N(&t);
-	return t;
+	N* result = initN();
+	result = SUB_NDN_N(SUB_NDN_N(a, b, 0), SUB_NDN_N(a, b, DIV_NN_Dk(a, b, 0)), DIV_NN_Dk(a, b, 0) + 1);
+	return result;
 }

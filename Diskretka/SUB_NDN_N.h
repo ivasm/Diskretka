@@ -1,16 +1,18 @@
 #pragma once
 // N-9
 
-N SUB_NDN_N(N a, N b, int d)
+N* SUB_NDN_N(N* a, N* b, int d)
 {
-	//переменная для умножения на число
-	N afterMul;
-	afterMul.n = 0;
-	afterMul.len = 0;
-	N result;
-	result.n = 0;
-	result.len = 0;
-	afterMul = (MUL_ND_N(b, d)); //Умножаем
-	result = (SUB_NN_N(a, afterMul));
+	N* result = initN();
+	if (COM_NN_D(a, b) == 2) {
+		N* first = assignmentN(a);
+		N* second = assignmentN(b);
+		result = SUB_NN_N(first, MUL_ND_N(second, d));
+	}
+	else {
+		N* first = assignmentN(b);
+		N* second = assignmentN(a);
+		result = SUB_NN_N(first, MUL_ND_N(second, d));
+	}
 	return result;
 }
