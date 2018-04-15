@@ -26,6 +26,8 @@ N* initN();
 N* inputN();
 void printN(N*);
 N* freeN(N*);
+N* deNULL(N*);
+N* assignmentN(N* n);
 
 Z* initZ();
 Z* inputZ();
